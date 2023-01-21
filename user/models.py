@@ -22,14 +22,3 @@ class Student(models.Model):
 
     def __str__(self):
         return str(self.name)
-
-class Btudent(models.Model):
-    name = models.CharField(max_length = 35)
-    age = models.CharField(max_length = 10)
-    birthdate = models.DateTimeField(null = True , blank = True )    
-    college = models.ForeignKey(College, on_delete = models.SET_NULL, null=True)
-    branch = models.ForeignKey(Branch, on_delete = models.SET_NULL, null=True)
-
-    def __str__(self):
-        return str(self.name)
-
